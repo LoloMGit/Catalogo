@@ -1,0 +1,78 @@
+:root {
+    --color-principal: #333;
+    --color-secundario: #666;
+    --color-fondo: #f9f9f9;
+    --color-tarjeta: #fff;
+    --sombra: rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-principal);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--color-principal);
+    color: var(--color-tarjeta);
+    text-align: center;
+    padding: 1.5em 0;
+    box-shadow: 0 2px 4px var(--sombra);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 2em;
+}
+
+.producto {
+    background-color: var(--color-tarjeta);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--sombra);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    width: 320px;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.producto h2 {
+    margin: 15px 0 5px;
+    color: var(--color-principal);
+    font-size: 1.5em;
+}
+
+.producto p {
+    margin: 0 15px 15px;
+    color: var(--color-secundario);
+    font-size: 1em;
+}
+
+footer {
+    background-color: var(--color-principal);
+    color: var(--color-tarjeta);
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+}
