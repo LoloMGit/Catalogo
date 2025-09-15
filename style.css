@@ -1,31 +1,33 @@
+/* Variables de color */
 :root {
-    --color-principal: #333;
-    --color-secundario: #666;
-    --color-fondo: #f9f9f9;
-    --color-tarjeta: #fff;
-    --sombra: rgba(0,0,0,0.1);
+    --color-azul: #00ADE3;
+    --color-blanco: #FFFFFF;
+    --color-negro: #040708;
+    --color-sombra: rgba(0,0,0,0.25);
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: var(--color-fondo);
-    color: var(--color-principal);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
 
 header {
-    background-color: var(--color-principal);
-    color: var(--color-tarjeta);
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
     text-align: center;
-    padding: 1.5em 0;
-    box-shadow: 0 2px 4px var(--sombra);
+    padding: 2em 0;
+    border-bottom: 2px solid var(--color-azul);
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .container {
@@ -37,17 +39,20 @@ header h1 {
 }
 
 .producto {
-    background-color: var(--color-tarjeta);
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    border: 1px solid var(--color-azul);
     border-radius: 10px;
-    box-shadow: 0 4px 8px var(--sombra);
+    box-shadow: 0 4px 15px var(--color-sombra);
     overflow: hidden;
     text-align: center;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     width: 320px;
 }
 
 .producto:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 6px 20px var(--color-sombra);
 }
 
 .producto img {
@@ -55,24 +60,27 @@ header h1 {
     height: 200px;
     object-fit: cover;
     display: block;
+    border-bottom: 1px solid var(--color-azul);
 }
 
 .producto h2 {
     margin: 15px 0 5px;
-    color: var(--color-principal);
+    color: var(--color-azul);
     font-size: 1.5em;
+    text-transform: uppercase;
 }
 
 .producto p {
     margin: 0 15px 15px;
-    color: var(--color-secundario);
+    color: var(--color-blanco);
     font-size: 1em;
 }
 
 footer {
-    background-color: var(--color-principal);
-    color: var(--color-tarjeta);
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
     text-align: center;
     padding: 1em 0;
     margin-top: 2em;
+    border-top: 2px solid var(--color-azul);
 }
