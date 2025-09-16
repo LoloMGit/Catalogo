@@ -84,3 +84,30 @@ footer {
     margin-top: 2em;
     border-top: 2px solid var(--color-azul);
 }
+.logo {
+    padding: 10px 0; /* Espacio alrededor del logo */
+}
+
+.logo img {
+    max-width: 200px; /* Ajusta el tamaño máximo de tu logo */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centra el logo */
+}
+
+/* Oculta el h1 si el logo es lo principal, o ajústalo si quieres ambos */
+header h1 {
+    display: none; /* Oculta el texto si el logo es suficiente */
+}
+/* Si quieres el h1 para SEO pero invisible
+header h1 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+*/
