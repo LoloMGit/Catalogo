@@ -2,7 +2,7 @@
 :root {
     --color-azul: #00ADE3;
     --color-blanco: #FFFFFF;
-    --color-negro: #040708;
+    --color-negro: #000000;
     --color-sombra: rgba(0,0,0,0.25);
     --ancho-sidebar: 250px; /* Ancho de la barra lateral */
 }
