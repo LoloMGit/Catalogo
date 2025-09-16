@@ -184,3 +184,53 @@ footer {
         font-size: 1.2em;
     }
 }
+.contacto-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.contacto-info {
+    background-color: #000000;
+    border: 1px solid var(--color-azul);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px var(--color-sombra);
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.contacto-info h2 {
+    color: var(--color-azul);
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contacto-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.contacto-info li {
+    margin: 15px 0;
+}
+
+.contacto-info li a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease-in-out;
+}
+
+.contacto-info li a:hover {
+    color: var(--color-azul);
+}
+
+.contacto-info i {
+    font-size: 1.5em;
+    margin-right: 10px;
+    color: var(--color-azul);
+}
