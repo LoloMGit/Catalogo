@@ -4,6 +4,7 @@
     --color-blanco: #FFFFFF;
     --color-negro: #040708;
     --color-sombra: rgba(0,0,0,0.25);
+    --ancho-sidebar: 250px; /* Ancho de la barra lateral */
 }
 
 body {
@@ -13,21 +14,57 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    display: flex; /* Usamos flexbox para la barra lateral y el contenido principal */
+    min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la ventana */
+}
+
+/* Estilos de la barra lateral */
+.sidebar {
+    width: var(--ancho-sidebar);
+    background-color: var(--color-negro);
+    border-right: 2px solid var(--color-azul);
+    padding: 20px;
+    position: fixed; /* Hace que la barra lateral sea fija */
+    height: 100%; /* Ocupa toda la altura */
+    box-shadow: 2px 0 5px var(--color-sombra);
+    display: flex;
+    flex-direction: column; /* Para organizar el logo y la navegación verticalmente */
+    align-items: center; /* Centra horizontalmente el contenido */
+}
+
+.sidebar .logo {
+    margin-bottom: 30px; /* Espacio debajo del logo */
+}
+
+.sidebar .logo img {
+    max-width: 180px; /* Tamaño del logo en la barra lateral */
+    height: auto;
+    display: block;
+}
+
+/* Estilos para el contenedor principal de contenido */
+.content-wrapper {
+    flex-grow: 1; /* Permite que este contenedor ocupe el espacio restante */
+    margin-left: var(--ancho-sidebar); /* Deja espacio para la barra lateral fija */
+    display: flex;
+    flex-direction: column; /* Para que header, main y footer se apilen verticalmente */
 }
 
 header {
     background-color: var(--color-negro);
     color: var(--color-blanco);
     text-align: center;
-    padding: 2em 0;
+    padding: 1.5em 0; /* Padding un poco más pequeño */
     border-bottom: 2px solid var(--color-azul);
+    box-shadow: 0 2px 4px var(--color-sombra);
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 1.5em; /* Título más pequeño */
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    color: var(--color-blanco); /* Asegura el color blanco */
 }
 
 .container {
@@ -36,6 +73,7 @@ header h1 {
     justify-content: center;
     gap: 25px;
     padding: 2em;
+    flex-grow: 1; /* Permite que el main ocupe el espacio restante */
 }
 
 .producto {
@@ -81,33 +119,37 @@ footer {
     color: var(--color-blanco);
     text-align: center;
     padding: 1em 0;
-    margin-top: 2em;
+    margin-top: auto; /* Empuja el footer hacia abajo */
     border-top: 2px solid var(--color-azul);
 }
-.logo {
-    padding: 10px 0; /* Espacio alrededor del logo */
-}
 
-.logo img {
-    max-width: 200px; /* Ajusta el tamaño máximo de tu logo */
-    height: auto;
-    display: block;
-    margin: 0 auto; /* Centra el logo */
-}
+/* Media Queries para responsividad (opcional, pero recomendado) */
+@media (max-width: 768px) {
+    .sidebar {
+        position: static; /* La barra lateral ya no es fija en pantallas pequeñas */
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 2px solid var(--color-azul);
+        flex-direction: row; /* Elementos del sidebar en fila */
+        justify-content: center;
+        padding: 10px 0;
+    }
 
-/* Oculta el h1 si el logo es lo principal, o ajústalo si quieres ambos */
-header h1 {
-    display: none; /* Oculta el texto si el logo es suficiente */
+    .sidebar .logo {
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+
+    .sidebar .logo img {
+        max-width: 120px; /* Logo más pequeño en móvil */
+    }
+
+    .content-wrapper {
+        margin-left: 0; /* Sin margen en pantallas pequeñas */
+    }
+
+    header h1 {
+        font-size: 1.2em; /* Título aún más pequeño en móvil */
+    }
 }
-/* Si quieres el h1 para SEO pero invisible
-header h1 {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    border: 0;
-}
-*/
