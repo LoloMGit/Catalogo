@@ -2,20 +2,20 @@
 :root {
     --color-azul: #00ADE3;
     --color-blanco: #FFFFFF;
-    --color-negro: #000000;
+    --color-negro: #000000; /* CAMBIADO A NEGRO PURO */
     --color-sombra: rgba(0,0,0,0.25);
-    --ancho-sidebar: 250px; /* Ancho de la barra lateral */
+    --ancho-sidebar: 250px;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--color-negro);
+    background-color: var(--color-negro); /* Ahora usará #000000 */
     color: var(--color-blanco);
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    display: flex; /* Usamos flexbox para la barra lateral y el contenido principal */
-    min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la ventana */
+    display: flex;
+    min-height: 100vh;
 }
 
 /* Estilos de la barra lateral */
