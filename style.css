@@ -259,40 +259,44 @@ footer {
     font-size: 1.1em;
     line-height: 1.8;
 }
+
+.card-acceso img {
+    width: 60px; /* Hacemos la imagen más pequeña */
+    height: 60px;
+    border-radius: 50%; /* La hacemos circular, si quieres */
+    object-fit: cover;
+}
+
+/* Estilos para el contenedor de accesos rápidos */
 .acceso-rapido {
     text-decoration: none; /* Quita el subrayado del enlace */
     color: var(--color-blanco);
-    text-align: center;
-    width: 320px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: left;
 }
-    
 
 .card-acceso {
     background-color: var(--color-negro);
     border: 1px solid var(--color-azul);
     border-radius: 10px;
     box-shadow: 0 4px 15px var(--color-sombra);
-    padding: 20px; /* Reducimos el padding */
+    padding: 20px;
     width: 320px;
     display: flex; /* Hacemos el contenedor flexible */
     align-items: center; /* Centramos verticalmente los elementos */
-    gap: 20px; /* Agregamos espacio entre el texto y la imagen */
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Agregamos la transición */
-
+    gap: 20px; /* Espacio entre el texto y la imagen */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-.acceso-rapido:hover {
-    transform: translateY(-5px) scale(1.02);
-}
 .acceso-rapido:hover .card-acceso {
-    background-color: #1a1a1a;
+    background-color: #1a1a1a; /* Un gris oscuro, más claro que el negro */
+    transform: translateY(-5px) scale(1.02);
     box-shadow: 0 6px 20px var(--color-sombra);
 }
+
 .card-acceso img {
     width: 60px; /* Hacemos la imagen más pequeña */
     height: 60px;
-    border-radius: 50%; /* La hacemos circular, si quieres */
+    border-radius: 50%;
     object-fit: cover;
 }
 
