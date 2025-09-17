@@ -282,6 +282,7 @@ footer {
     display: flex; /* Hacemos el contenedor flexible */
     align-items: center; /* Centramos verticalmente los elementos */
     gap: 20px; /* Agregamos espacio entre el texto y la imagen */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Agregamos la transición */
 
 }
 
