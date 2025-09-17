@@ -280,3 +280,16 @@ footer {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 6px 20px var(--color-sombra);
 }
+.card-acceso img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card-acceso h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: var(--color-azul);
+}
