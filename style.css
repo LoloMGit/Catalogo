@@ -268,12 +268,17 @@ footer {
 }
 
 /* Estilos para el contenedor de accesos rápidos */
-.acceso-rapido {
-    text-decoration: none; /* Quita el subrayado del enlace */
-    color: var(--color-blanco);
-    text-align: left;
+.accesos-rapidos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 2em;
 }
-
+/* Estilos de la tarjeta de acceso rápido */
+.acceso-rapido {
+    text-decoration: none; /* Quitamos el subrayado del enlace */
+}
 .card-acceso {
     background-color: var(--color-negro);
     border: 1px solid var(--color-azul);
@@ -281,28 +286,27 @@ footer {
     box-shadow: 0 4px 15px var(--color-sombra);
     padding: 20px;
     width: 320px;
-    display: flex; /* Hacemos el contenedor flexible */
-    align-items: center; /* Centramos verticalmente los elementos */
-    gap: 20px; /* Espacio entre el texto y la imagen */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* Aplicamos la transición a lo que va a cambiar: fondo, sombra, y transformación */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.acceso-rapido:hover .card-acceso {
-    background-color: #1a1a1a;
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 6px 20px var(--color-sombra);
-}
+.acceso-rapido:hover  .card-acceso:hover {
+    background-color: #1a1a1a; /* Color un poco más claro */
+    transform: translateY(-5px) scale(1.02); /* Se levanta un poco */
+    box-shadow: 0 6px 20px var(--color-sombra); /* Sombra más pronunciada */
 }
 
 .card-acceso img {
-    width: 60px; /* Hacemos la imagen más pequeña */
+     width: 60px;
     height: 60px;
     border-radius: 50%;
     object-fit: cover;
 }
-
 .card-acceso h2 {
-    margin: 0;
+   margin: 0;
     font-size: 1.5em;
     color: var(--color-azul);
 }
