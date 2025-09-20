@@ -306,34 +306,52 @@ footer {
     font-size: 1.5em;
     color: var(--color-azul);
 }
-/* --- Media Queries para dispositivos móviles --- */
+/* --- Media Queries para un diseño con menú superior en móvil --- */
 
 @media (max-width: 768px) {
-    /* Ajusta el contenido principal para pantallas pequeñas */
-    .content-wrapper {
-        margin-left: 0; /* Elimina el espacio de la barra lateral en móvil */
-        width: 100%;
-    }
-
-    /* Oculta la barra lateral para dejar más espacio al contenido */
+    /* El sidebar se convierte en una barra superior horizontal */
     .sidebar {
-        display: none;
+        position: static; /* Cambia a una posición normal en el flujo del documento */
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 2px solid var(--color-azul);
+        flex-direction: row;
+        justify-content: center;
+        padding: 10px 0;
     }
 
-    /* Muestra un botón para el menú en móviles (opcional) */
-    .sidebar-toggle {
-        display: block;
+    .sidebar .logo {
+        margin-bottom: 0;
+        margin-right: 20px;
     }
 
-    /* Hace que los botones de acceso rápido y productos se vean en una sola columna */
+    .sidebar .logo img {
+        max-width: 120px;
+    }
+
+    nav ul {
+        display: flex; /* Convierte los enlaces de navegación en una fila */
+        gap: 20px;
+    }
+
+    .content-wrapper {
+        margin-left: 0;
+    }
+
+    /* Ajusta el resto de los elementos para pantallas pequeñas */
+    header h1 {
+        font-size: 1.2em;
+    }
+    
     .accesos-rapidos-container {
         flex-direction: column;
         align-items: center;
     }
 
     .producto, .card-acceso {
-        width: 90%; /* Hace que los elementos ocupen casi todo el ancho de la pantalla */
-        margin-bottom: 20px; /* Añade espacio entre los elementos */
+        width: 90%;
+        margin-bottom: 20px;
     }
 
     .card-acceso img {
