@@ -154,36 +154,53 @@ footer {
     border-top: 2px solid var(--color-azul);
 }
 
-/* Media Queries para responsividad */
-@media (max-width: 768px) {
-    .sidebar {
-        position: static;
-        width: 100%;
-        height: auto;
-        border-right: none;
-        border-bottom: 2px solid var(--color-azul);
-        flex-direction: row;
-        justify-content: center;
-        padding: 10px 0;
-    }
-
-    .sidebar .logo {
-        margin-bottom: 0;
-        margin-right: 20px;
-    }
-
-    .sidebar .logo img {
-        max-width: 120px;
-    }
-
-    .content-wrapper {
-        margin-left: 0;
-    }
-
-    header h1 {
-        font-size: 1.2em;
-    }
+/* Estilos de los accesos rápidos */
+.accesos-rapidos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 2em;
 }
+
+.acceso-rapido {
+    text-decoration: none;
+    color: var(--color-blanco);
+    text-align: left;
+}
+
+.card-acceso {
+    background-color: var(--color-negro);
+    border: 1px solid var(--color-azul);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px var(--color-sombra);
+    padding: 20px;
+    width: 320px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-acceso:hover {
+    background-color: #1a1a1a;
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 6px 20px var(--color-sombra);
+}
+
+.card-acceso img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card-acceso h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: var(--color-azul);
+}
+
 .contacto-container {
     display: flex;
     justify-content: center;
@@ -260,52 +277,7 @@ footer {
     line-height: 1.8;
 }
 
-/* Estilos de los accesos rápidos */
-.accesos-rapidos-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    padding: 2em;
-}
-
-.acceso-rapido {
-    text-decoration: none;
-    color: var(--color-blanco);
-    text-align: left;
-}
-
-.card-acceso {
-    background-color: var(--color-negro);
-    border: 1px solid var(--color-azul);
-    border-radius: 10px;
-    box-shadow: 0 4px 15px var(--color-sombra);
-    padding: 20px;
-    width: 320px;
-    /* Quitamos las reglas que contradicen la version movil */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.card-acceso:hover {
-    background-color: #1a1a1a;
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 6px 20px var(--color-sombra);
-}
-
-.card-acceso img {
-    width: 80px; /* Tamaño de imagen más grande para escritorio */
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.card-acceso h2 {
-    margin: 0;
-    font-size: 1.5em;
-    color: var(--color-azul);
-}
 /* --- Media Queries para un diseño responsivo avanzado (Móvil) --- */
-
 @media (max-width: 768px) {
     /* El sidebar se convierte en una barra de navegación superior fija */
     .sidebar {
@@ -322,16 +294,16 @@ footer {
         z-index: 1000;
         box-shadow: 0 2px 5px var(--color-sombra);
     }
-
+    
     .sidebar .logo {
         margin-bottom: 0;
         margin-right: 20px;
     }
-
+    
     .sidebar .logo img {
         max-width: 120px;
     }
-
+    
     nav ul {
         display: flex;
         gap: 20px;
@@ -351,7 +323,7 @@ footer {
         margin-left: 0;
         margin-top: 120px;
     }
-
+    
     header h1 {
         font-size: 1.2em;
     }
@@ -389,7 +361,7 @@ footer {
         margin-bottom: 10px;
         object-fit: contain;
     }
-
+    
     /* Asegura que los productos se ajusten a la cuadrícula */
     .producto {
         width: auto;
