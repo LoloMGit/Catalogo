@@ -319,25 +319,33 @@ footer {
         border-right: none;
         border-bottom: 2px solid var(--color-azul);
         flex-direction: row;
-        justify-content: space-between; /* El logo a la izquierda, la navegación a la derecha */
-        padding: 10px 20px;
+        justify-content: center;
+        padding: 10px 0;
         z-index: 1000;
         box-shadow: 0 2px 5px var(--color-sombra);
     }
-
+    
     .sidebar .logo {
         margin-bottom: 0;
-        margin-right: 0; /* No necesitamos este margen en el móvil */
+        margin-right: 20px;
     }
-
+    
     .sidebar .logo img {
-        max-width: 100px; /* Hacemos el logo un poco más pequeño */
+        max-width: 120px;
     }
-
+    
     nav ul {
         display: flex;
         gap: 20px;
         align-items: center;
+    }
+
+    /* Nuevo estilo para los botones de navegación: ícono arriba, texto abajo */
+    nav a {
+        flex-direction: column;
+        text-align: center;
+        font-size: 0.9em;
+        gap: 5px;
     }
 
     /* El contenido principal se mueve hacia abajo para dejar espacio al menú superior */
@@ -345,44 +353,57 @@ footer {
         margin-left: 0;
         margin-top: 120px;
     }
+    
+    header h1 {
+        font-size: 1.2em;
+    }
 
     /* Los contenedores de botones y productos ahora usan un diseño de 2 columnas */
     .accesos-rapidos-container, .container {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* 2 columnas de igual tamaño */
+        grid-template-columns: 1fr 1fr;
         gap: 15px;
         padding: 1em;
     }
 
     /* Estilos para que las tarjetas de acceso rápido se vean bien en móvil */
     .acceso-rapido {
-        width: 100%;
-        box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+        width: auto;
+        box-sizing: border-box;
     }
 
     .card-acceso {
-        width: auto; /* El tamaño se ajusta automáticamente a las columnas de la cuadrícula */
-        flex-direction: column; /* Apila el texto y la imagen para evitar que se aprieten */
+        width: auto;
+        flex-direction: column;
         text-align: center;
         align-items: center;
         padding: 15px;
     }
-    
+
     .card-acceso h2 {
-        font-size: 1em; /* Texto un poco más pequeño para caber mejor */
+        font-size: 1em;
         line-height: 1.2;
     }
 
     .card-acceso img {
-        width: 40px; /* Tamaño de imagen más pequeño */
+        width: 40px;
         height: 40px;
-        margin-bottom: 10px; /* Espacio entre la imagen y el título */
+        margin-bottom: 10px;
+        object-fit: contain;
     }
-
+    
     /* Asegura que los productos se ajusten a la cuadrícula */
     .producto {
         width: auto;
         margin-bottom: 0;
         padding: 10px;
+    }
+
+    .producto h2 {
+        font-size: 1.2em; /* Hace el título de los productos más pequeño */
+    }
+
+    .producto img {
+        height: 120px; /* Ajusta el tamaño de la imagen de los productos */
     }
 }
