@@ -306,3 +306,37 @@ footer {
     font-size: 1.5em;
     color: var(--color-azul);
 }
+/* --- Media Queries para dispositivos móviles --- */
+
+@media (max-width: 768px) {
+    /* Ajusta el contenido principal para pantallas pequeñas */
+    .content-wrapper {
+        margin-left: 0; /* Elimina el espacio de la barra lateral en móvil */
+        width: 100%;
+    }
+
+    /* Oculta la barra lateral para dejar más espacio al contenido */
+    .sidebar {
+        display: none;
+    }
+
+    /* Muestra un botón para el menú en móviles (opcional) */
+    .sidebar-toggle {
+        display: block;
+    }
+
+    /* Hace que los botones de acceso rápido y productos se vean en una sola columna */
+    .accesos-rapidos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .producto, .card-acceso {
+        width: 90%; /* Hace que los elementos ocupen casi todo el ancho de la pantalla */
+        margin-bottom: 20px; /* Añade espacio entre los elementos */
+    }
+
+    .card-acceso img {
+        height: 120px;
+    }
+}
