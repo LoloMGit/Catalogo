@@ -337,8 +337,8 @@ footer {
     .accesos-rapidos-container, .container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 15px;
-        padding: 1em;
+        gap: 20px;
+       
     }
 
     /* Estilos para que las tarjetas de acceso rápido se vean bien en móvil */
