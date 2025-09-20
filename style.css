@@ -33,7 +33,7 @@ body {
 }
 .version-text {
     font-size: 0.8em;
-    color: #888; /* Un gris suave para que no compita con el resto del texto */
+    color: #888;
     display: block;
     margin-top: 5px;
 }
@@ -335,10 +335,10 @@ footer {
 
     /* Los contenedores de botones y productos ahora usan un diseño de 2 columnas */
     .accesos-rapidos-container, .container {
-       display: grid;
-    grid-template-columns: 1fr 1fr; /* Volvemos a 2 columnas para que los botones sean más anchos */
-    gap: 15px;
-    padding: 1em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        padding: 1em;
     }
 
     /* Estilos para que las tarjetas de acceso rápido se vean bien en móvil */
@@ -356,15 +356,15 @@ footer {
     }
 
     .card-acceso h2 {
-        font-size: 0.9em; /* Hace el texto más pequeño para que quepa bien */
-    line-height: 1.2;
+        font-size: 0.9em;
+        line-height: 1.2;
     }
 
     .card-acceso img {
-        width: 60px; /* Tamaño de imagen más grande para que se vea mejor */
-    height: 60px;
-    margin-bottom: 5px;
-    object-fit: contain;
+        width: 60px;
+        height: 60px;
+        margin-bottom: 5px;
+        object-fit: contain;
     }
     
     /* Asegura que los productos se ajusten a la cuadrícula */
