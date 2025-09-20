@@ -282,10 +282,8 @@ footer {
     box-shadow: 0 4px 15px var(--color-sombra);
     padding: 20px;
     width: 320px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    /* Quitamos las reglas que contradicen la version movil */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .card-acceso:hover {
@@ -295,8 +293,8 @@ footer {
 }
 
 .card-acceso img {
-    width: 60px;
-    height: 60px;
+    width: 80px; /* Tamaño de imagen más grande para escritorio */
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -324,16 +322,16 @@ footer {
         z-index: 1000;
         box-shadow: 0 2px 5px var(--color-sombra);
     }
-    
+
     .sidebar .logo {
         margin-bottom: 0;
         margin-right: 20px;
     }
-    
+
     .sidebar .logo img {
         max-width: 120px;
     }
-    
+
     nav ul {
         display: flex;
         gap: 20px;
@@ -353,7 +351,7 @@ footer {
         margin-left: 0;
         margin-top: 120px;
     }
-    
+
     header h1 {
         font-size: 1.2em;
     }
@@ -391,7 +389,7 @@ footer {
         margin-bottom: 10px;
         object-fit: contain;
     }
-    
+
     /* Asegura que los productos se ajusten a la cuadrícula */
     .producto {
         width: auto;
@@ -400,10 +398,10 @@ footer {
     }
 
     .producto h2 {
-        font-size: 1.2em; /* Hace el título de los productos más pequeño */
+        font-size: 1.2em;
     }
 
     .producto img {
-        height: 120px; /* Ajusta el tamaño de la imagen de los productos */
+        height: 120px;
     }
 }
