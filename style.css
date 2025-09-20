@@ -362,4 +362,16 @@ footer {
         height: auto;
         max-width: 60px;
     }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 columnas de igual tamaño */
+        gap: 15px;
+    }
+    
+    /* Asegura que los productos se ajusten a la cuadrícula */
+    .producto {
+        width: auto;
+    }
+}
 }
