@@ -306,12 +306,14 @@ footer {
     font-size: 1.5em;
     color: var(--color-azul);
 }
-/* --- Media Queries para un diseño con menú superior en móvil --- */
+/* --- Media Queries para un diseño responsivo avanzado (Móvil) --- */
 
 @media (max-width: 768px) {
-    /* El sidebar se convierte en una barra superior horizontal */
+    /* El sidebar se convierte en una barra de navegación superior */
     .sidebar {
-        position: static; /* Cambia a una posición normal en el flujo del documento */
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
         height: auto;
         border-right: none;
@@ -319,6 +321,8 @@ footer {
         flex-direction: row;
         justify-content: center;
         padding: 10px 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px var(--color-sombra);
     }
 
     .sidebar .logo {
@@ -331,30 +335,31 @@ footer {
     }
 
     nav ul {
-        display: flex; /* Convierte los enlaces de navegación en una fila */
+        display: flex;
         gap: 20px;
-    }
-
-    .content-wrapper {
-        margin-left: 0;
-    }
-
-    /* Ajusta el resto de los elementos para pantallas pequeñas */
-    header h1 {
-        font-size: 1.2em;
-    }
-    
-    .accesos-rapidos-container {
-        flex-direction: column;
         align-items: center;
     }
 
+    /* El contenido principal se mueve hacia abajo para dejar espacio al menú superior */
+    .content-wrapper {
+        margin-left: 0;
+        margin-top: 100px; /* Espacio para la nueva barra superior */
+    }
+
+    /* Los contenedores de botones y productos ahora usan un diseño de 2 columnas */
+    .accesos-rapidos-container, .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 columnas de igual tamaño */
+        gap: 15px;
+    }
+
     .producto, .card-acceso {
-        width: 90%;
-        margin-bottom: 20px;
+        width: auto; /* El tamaño se ajusta automáticamente a las columnas */
+        margin-bottom: 0; /* Ya no es necesario el margen inferior */
     }
 
     .card-acceso img {
-        height: 120px;
+        height: auto;
+        max-width: 60px;
     }
 }
