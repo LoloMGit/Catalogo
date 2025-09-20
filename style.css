@@ -336,9 +336,9 @@ footer {
     /* Los contenedores de botones y productos ahora usan un diseño de 2 columnas */
     .accesos-rapidos-container, .container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 20px;
-       
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        padding: 1em;
     }
 
     /* Estilos para que las tarjetas de acceso rápido se vean bien en móvil */
@@ -356,13 +356,13 @@ footer {
     }
 
     .card-acceso h2 {
-        font-size: 0.8em;
+        font-size: 0.9em;
         line-height: 1.2;
     }
 
     .card-acceso img {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
         margin-bottom: 5px;
         object-fit: contain;
     }
