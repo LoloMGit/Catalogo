@@ -367,18 +367,28 @@ footer {
         object-fit: contain;
     }
     
-    /* Asegura que los productos se ajusten a la cuadrícula */
-    .producto {
-        width: auto;
-        margin-bottom: 0;
-        padding: 10px;
-    }
+  /* Asegura que los productos se ajusten a la cuadrícula */
+.producto {
+    width: 100%; /* Ocupa todo el espacio de su columna */
+    box-sizing: border-box; /* Importante para que el padding no desborde la caja */
+    margin-bottom: 0;
+    padding: 10px;
+    /* Puedes añadir aquí otras reglas si quieres un diseño más compacto en móvil */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
-    .producto h2 {
-        font-size: 1.2em;
-    }
+.producto img {
+    height: 100px; /* Hacemos la imagen más pequeña para el móvil */
+}
 
-    .producto img {
-        height: 120px;
-    }
+.producto h2 {
+    font-size: 1.1em; /* Ajustamos el tamaño del título del producto */
+    margin: 5px 0;
+}
+
+.producto p {
+    font-size: 0.9em; /* Ajustamos el tamaño de la descripción del producto */
 }
