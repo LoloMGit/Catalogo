@@ -332,13 +332,21 @@ footer {
     header h1 {
         font-size: 1.2em;
     }
-
-    /* Los contenedores de botones y productos ahora usan un diseño de 2 columnas */
-    .accesos-rapidos-container, .container {
+    
+    /* 1. CUADRÍCULA DE CATEGORÍAS (Acceso Rápido) - **3 columnas** */
+    .accesos-rapidos-container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 20px;
-        
+        grid-template-columns: 1fr 1fr 1fr; 
+        gap: 15px; /* Usamos 15px, 20px puede ser mucho */
+        padding: 1em;
+    }
+    
+    /* 2. CUADRÍCULA DE PRODUCTOS (Categorías) - **2 columnas** */
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        padding: 1em;
     }
 
     /* Estilos para que las tarjetas de acceso rápido se vean bien en móvil */
